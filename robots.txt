@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beamerboys005-collab.github.io/Nauman-Muhammad/sitemap.xml

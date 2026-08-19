@@ -456,9 +456,17 @@ function showToast(msg) {
   }
 })();
 
-/* =================== CONTACT FORM =================== */
+/* =================== CONTACT FORM & ANTI-SPAM =================== */
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
+  
+  // Anti-spam honeypot check
+  const honeypot = this.querySelector('input[name="_gotcha"]');
+  if (honeypot && honeypot.value !== '') {
+    // Silent discard for bots
+    return;
+  }
+
   const name = document.getElementById('form-name').value.trim();
   const email = document.getElementById('form-email').value.trim();
   const service = document.getElementById('form-service').value;
@@ -466,7 +474,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   const statusEl = document.getElementById('form-status');
 
   if (!name || !email || !service || !details) {
-    statusEl.textContent = 'Please fill in all fields.';
+    statusEl.textContent = 'Please fill in all required fields.';
     statusEl.className = 'form-status error';
     return;
   }
@@ -482,11 +490,66 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   const waUrl = `https://wa.me/923714627153?text=${msg}`;
   window.open(waUrl, '_blank', 'noopener,noreferrer');
 
-  statusEl.textContent = '✓ Opening WhatsApp with your message...';
+  statusEl.textContent = '✓ Message prepared! Connecting via WhatsApp...';
   statusEl.className = 'form-status success';
   this.reset();
-  setTimeout(() => { statusEl.textContent = ''; statusEl.className = 'form-status'; }, 5000);
+  setTimeout(() => { statusEl.textContent = ''; statusEl.className = 'form-status'; }, 6000);
 });
+
+/* =================== KEYBOARD ACCESSIBILITY =================== */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('webgrowx-modal');
+    if (modal && modal.classList.contains('active')) {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+});
+
+/* =================== COOKIE CONSENT BANNER =================== */
+(function initCookieBanner() {
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept-btn');
+  const declineBtn = document.getElementById('cookie-decline-btn');
+  if (!banner || !acceptBtn || !declineBtn) return;
+
+  const consent = localStorage.getItem('nm_cookie_consent');
+  if (!consent) {
+    setTimeout(() => {
+      banner.classList.add('show');
+      banner.setAttribute('aria-hidden', 'false');
+    }, 1800);
+  }
+
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('nm_cookie_consent', 'accepted');
+    banner.classList.remove('show');
+    banner.setAttribute('aria-hidden', 'true');
+  });
+
+  declineBtn.addEventListener('click', () => {
+    localStorage.setItem('nm_cookie_consent', 'declined');
+    banner.classList.remove('show');
+    banner.setAttribute('aria-hidden', 'true');
+  });
+})();
+
+/* =================== CTA EVENT TRACKING HOOKS =================== */
+(function initTracking() {
+  document.querySelectorAll('a[href^="http"], .btn, .email-trigger').forEach((el) => {
+    el.addEventListener('click', () => {
+      const label = el.getAttribute('aria-label') || el.innerText || el.href;
+      if (window.gtag) {
+        window.gtag('event', 'click', {
+          event_category: 'outbound_or_cta',
+          event_label: label
+        });
+      }
+    });
+  });
+})();
 
 /* =================== TYPED EFFECT =================== */
 (function typeHeroRoles() {
@@ -505,3 +568,4 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   el.style.transition = 'opacity 0.35s ease';
   setInterval(cycle, 3800);
 })();
+
