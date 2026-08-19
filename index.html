@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nauman Muhammad is an AI Expert, Vibe Coder, Graphic Designer and Lead Generation Specialist building digital experiences, modern websites, intelligent automation systems, creative designs, and lead generation solutions." />
+  <meta property="og:title" content="Nauman Muhammad | AI Expert • Vibe Coder • Graphic Designer" />
+  <meta property="og:description" content="Building digital experiences, modern websites, intelligent automation systems, creative designs, and qualified lead generation solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://flowmation-rho.vercel.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#060608" />
+  <title>Nauman Muhammad | AI Expert • Vibe Coder • Graphic Designer</title>
+
+  <!-- Professional Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =========== CUSTOM CURSOR =========== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- =========== LOADER =========== -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">NM</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+      <div class="loader-text" id="loader-text">Loading Portfolio...</div>
+    </div>
+  </div>
+
+  <!-- =========== NAVIGATION =========== -->
+  <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Nauman Muhammad home">
+        <span class="logo-nm">NM</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+        <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+        <li><a href="#services" class="nav-link" id="nav-services">Services</a></li>
+        <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+        <li><a href="#graphic-design" class="nav-link" id="nav-graphic-design">Designs</a></li>
+        <li><a href="#certifications" class="nav-link" id="nav-certifications">Certifications</a></li>
+        <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-hire magnetic-btn" id="hire-me-btn" aria-label="Hire Nauman Muhammad">Hire Me</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========== HERO SECTION =========== -->
+  <section class="hero" id="home" aria-label="Hero section">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <div class="hero-text" data-reveal>
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          <span>Available for Projects</span>
+        </div>
+        <h1 class="hero-name">
+          <span class="name-line" aria-label="Nauman">NAUMAN</span>
+          <span class="name-line accent-gradient" aria-label="Muhammad">MUHAMMAD</span>
+        </h1>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <p class="hero-roles" aria-label="Professional roles">
+          AI EXPERT &nbsp;<span class="sep">•</span>&nbsp; VIBE CODER &nbsp;<span class="sep">•</span>&nbsp; GRAPHIC DESIGNER
+        </p>
+        <p class="hero-sub-roles" aria-label="Additional specializations">
+          LEAD GENERATION &nbsp;<span class="sep">•</span>&nbsp; AI AUTOMATION &nbsp;<span class="sep">•</span>&nbsp; WEB DEVELOPMENT
+        </p>
+        <p class="hero-desc">
+          Building AI-powered digital experiences, modern websites, intelligent automation systems, creative designs, and qualified lead generation solutions.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary magnetic-btn" id="view-work-btn" aria-label="View Nauman Muhammad's work">View My Work</a>
+          <a href="#contact" class="btn btn-outline magnetic-btn" id="lets-work-btn" aria-label="Contact Nauman Muhammad">Let's Work Together</a>
+        </div>
+        <div class="hero-social" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/nauman-muhammad-8a08a33ab" target="_blank" rel="noopener noreferrer" class="social-icon social-linkedin" id="hero-linkedin" aria-label="Nauman Muhammad on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://wa.me/923714627153" target="_blank" rel="noopener noreferrer" class="social-icon social-whatsapp" id="hero-whatsapp" aria-label="WhatsApp Nauman Muhammad">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <button type="button" class="social-icon social-email email-trigger" id="hero-email" aria-label="Email Nauman Muhammad">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="hero-portrait-wrap" data-reveal-right>
+        <div class="portrait-3d-container" id="portrait-3d">
+          <div class="portrait-glow-ring ring-1" aria-hidden="true"></div>
+          <div class="portrait-glow-ring ring-2" aria-hidden="true"></div>
+          <div class="portrait-glow-ring ring-3" aria-hidden="true"></div>
+          <div class="portrait-glass-frame">
+            <img src="assets/nauman-photo.jpg" alt="Nauman Muhammad - AI Expert, Vibe Coder, Graphic Designer" class="portrait-img" id="hero-portrait" loading="eager" />
+            <div class="portrait-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="portrait-particle-1" aria-hidden="true"></div>
+          <div class="portrait-particle-2" aria-hidden="true"></div>
+          <div class="portrait-particle-3" aria-hidden="true"></div>
+          <div class="portrait-badge" aria-label="AI Expert badge">
+            <span>🤖</span>
+            <span>AI Expert</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-label="Scroll down">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- =========== ABOUT SECTION =========== -->
+  <section class="section about-section" id="about" aria-label="About Nauman Muhammad">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-panel glass-card" data-reveal>
+          <div class="about-avatar">
+            <img src="assets/nauman-photo.jpg" alt="Nauman Muhammad" loading="lazy" />
+          </div>
+          <div class="about-monogram" aria-hidden="true">NM</div>
+          <div class="about-contact-mini">
+            <a href="https://www.linkedin.com/in/nauman-muhammad-8a08a33ab" target="_blank" rel="noopener noreferrer" class="mini-link" id="about-linkedin-btn">
+              View LinkedIn Profile →
+            </a>
+          </div>
+        </div>
+        <div class="about-content" data-reveal>
+          <h3 class="about-intro">
+            Hi, I'm <span class="accent">Nauman Muhammad</span> — an AI Expert &amp; Creative Digital Specialist.
+          </h3>
+          <p class="about-body">
+            I operate at the intersection of <strong>Artificial Intelligence</strong>, <strong>Vibe Coding</strong>, <strong>Graphic Design</strong>, and <strong>Lead Generation</strong>. My work focuses on transforming ideas into intelligent, functional, and visually stunning digital experiences.
+          </p>
+          <p class="about-body">
+            From AI-powered automations to full-stack web development, from scroll-stopping graphics to targeted lead campaigns — I bring a multi-disciplinary approach to every project I take on.
+          </p>
+          <div class="about-pillars">
+            <div class="pillar" id="pillar-ai">
+              <div class="pillar-icon">🧠</div>
+              <span>AI Solutions</span>
+            </div>
+            <div class="pillar" id="pillar-code">
+              <div class="pillar-icon">⚡</div>
+              <span>Vibe Coding</span>
+            </div>
+            <div class="pillar" id="pillar-design">
+              <div class="pillar-icon">🎨</div>
+              <span>Graphic Design</span>
+            </div>
+            <div class="pillar" id="pillar-lead">
+              <div class="pillar-icon">📈</div>
+              <span>Lead Generation</span>
+            </div>
+            <div class="pillar" id="pillar-automation">
+              <div class="pillar-icon">🤖</div>
+              <span>Automation</span>
+            </div>
+            <div class="pillar" id="pillar-web">
+              <div class="pillar-icon">🌐</div>
+              <span>Web Development</span>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/nauman-muhammad-8a08a33ab" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin magnetic-btn" id="view-linkedin-btn" aria-label="View Nauman Muhammad's LinkedIn profile">
+            <svg style="width: 16px; height: 16px; fill: currentColor;" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            View LinkedIn Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SKILLS SECTION =========== -->
+  <section class="section skills-section" id="skills" aria-label="Skills and expertise">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Core <span class="accent">Skills</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card glass-card tilt-card" id="skill-ai" data-reveal>
+          <div class="skill-icon-wrap">
+            <div class="skill-icon">🧠</div>
+          </div>
+          <h3 class="skill-name">Artificial Intelligence</h3>
+          <p class="skill-desc">Building and deploying AI-powered solutions using cutting-edge language models and automation tools.</p>
+          <div class="skill-tags">
+            <span>LLMs</span><span>Prompting</span><span>AI Agents</span>
+          </div>
+        </div>
+        <div class="skill-card glass-card tilt-card" id="skill-vibe" data-reveal>
+          <div class="skill-icon-wrap">
+            <div class="skill-icon">⚡</div>
+          </div>
+          <h3 class="skill-name">Vibe Coding</h3>
+          <p class="skill-desc">AI-assisted coding workflows that accelerate development of modern digital products.</p>
+          <div class="skill-tags">
+            <span>AI Dev</span><span>Rapid Build</span><span>Modern Stack</span>
+          </div>
+        </div>
+        <div class="skill-card glass-card tilt-card" id="skill-web" data-reveal>
+          <div class="skill-icon-wrap">
+            <div class="skill-icon">🌐</div>
+          </div>
+          <h3 class="skill-name">Web Development</h3>
+          <p class="skill-desc">Building responsive, modern, and professional websites tailored for business impact.</p>
+          <div class="skill-tags">
+            <span>HTML/CSS</span><span>JavaScript</span><span>Responsive</span>
+          </div>
+        </div>
+        <div class="skill-card glass-card tilt-card" id="skill-design" data-reveal>
+          <div class="skill-icon-wrap">
+            <div class="skill-icon">🎨</div>
+          </div>
+          <h3 class="skill-name">Graphic Design</h3>
+          <p class="skill-desc">Professional creative visuals, social media content, branding, banners, and digital creatives.</p>
+          <div class="skill-tags">
+            <span>Branding</span><span>Social Media</span><span>Creatives</span>
+          </div>
+        </div>
+        <div class="skill-card glass-card tilt-card" id="skill-lead" data-reveal>
+          <div class="skill-icon-wrap">
+            <div class="skill-icon">📈</div>
+          </div>
+          <h3 class="skill-name">Lead Generation</h3>
+          <p class="skill-desc">Qualified lead research, business data collection, prospect outreach and pipeline building.</p>
+          <div class="skill-tags">
+            <span>B2B Leads</span><span>Research</span><span>Outreach</span>
+          </div>
+        </div>
+        <div class="skill-card glass-card tilt-card" id="skill-automation" data-reveal>
+          <div class="skill-icon-wrap">
+            <div class="skill-icon">🤖</div>
+          </div>
+          <h3 class="skill-name">AI Automation</h3>
+          <p class="skill-desc">Intelligent workflow automation and business process optimization using AI-driven systems.</p>
+          <div class="skill-tags">
+            <span>Workflows</span><span>Automation</span><span>Integration</span>
+          </div>
+        </div>
+        <div class="skill-card glass-card tilt-card" id="skill-aitools" data-reveal>
+          <div class="skill-icon-wrap">
+            <div class="skill-icon">🛠️</div>
+          </div>
+          <h3 class="skill-name">AI Tools</h3>
+          <p class="skill-desc">Expert at leveraging state-of-the-art AI platforms and tools for maximum productivity.</p>
+          <div class="skill-tags">
+            <span>Claude</span><span>Google AI</span><span>LLM Tools</span>
+          </div>
+        </div>
+        <div class="skill-card glass-card tilt-card" id="skill-marketing" data-reveal>
+          <div class="skill-icon-wrap">
+            <div class="skill-icon">📣</div>
+          </div>
+          <h3 class="skill-name">Digital Marketing</h3>
+          <p class="skill-desc">Online marketing strategies including Google Ads, social campaigns, and digital growth solutions.</p>
+          <div class="skill-tags">
+            <span>Google Ads</span><span>Social</span><span>Growth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SERVICES SECTION =========== -->
+  <section class="section services-section" id="services" aria-label="Services offered by Nauman Muhammad">
+    <canvas id="services-canvas" aria-hidden="true"></canvas>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">What I Offer</span>
+        <h2 class="section-title">My <span class="accent">Services</span></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card glass-card" id="service-ai" data-reveal>
+          <div class="service-num">01</div>
+          <div class="service-icon">🧠</div>
+          <h3 class="service-title">AI Solutions</h3>
+          <p class="service-desc">AI-powered digital solutions for businesses and online projects. From intelligent chatbots to custom AI integrations.</p>
+          <a href="#contact" class="service-cta">Get Started →</a>
+        </div>
+        <div class="service-card glass-card" id="service-vibe" data-reveal>
+          <div class="service-num">02</div>
+          <div class="service-icon">⚡</div>
+          <h3 class="service-title">Vibe Coding</h3>
+          <p class="service-desc">Building modern websites and digital products using AI-assisted coding workflows for faster, smarter development.</p>
+          <a href="#contact" class="service-cta">Get Started →</a>
+        </div>
+        <div class="service-card glass-card" id="service-web" data-reveal>
+          <div class="service-num">03</div>
+          <div class="service-icon">🌐</div>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-desc">Modern, responsive and professional websites that drive results. Built with clean code and premium design.</p>
+          <a href="#contact" class="service-cta">Get Started →</a>
+        </div>
+        <div class="service-card glass-card" id="service-design" data-reveal>
+          <div class="service-num">04</div>
+          <div class="service-icon">🎨</div>
+          <h3 class="service-title">Graphic Design</h3>
+          <p class="service-desc">Professional graphics, social media creatives, banners, promotional designs and compelling visual content.</p>
+          <a href="#contact" class="service-cta">Get Started →</a>
+        </div>
+        <div class="service-card glass-card" id="service-lead" data-reveal>
+          <div class="service-num">05</div>
+          <div class="service-icon">📈</div>
+          <h3 class="service-title">Lead Generation</h3>
+          <p class="service-desc">Qualified lead generation, prospect research, business data collection and targeted outreach support.</p>
+          <a href="#contact" class="service-cta">Get Started →</a>
+        </div>
+        <div class="service-card glass-card" id="service-automation" data-reveal>
+          <div class="service-num">06</div>
+          <div class="service-icon">🤖</div>
+          <h3 class="service-title">AI Automation</h3>
+          <p class="service-desc">AI-powered workflow automation and business process automation to eliminate repetitive tasks and maximize output.</p>
+          <a href="#contact" class="service-cta">Get Started →</a>
+        </div>
+        <div class="service-card glass-card" id="service-marketing" data-reveal>
+          <div class="service-num">07</div>
+          <div class="service-icon">📣</div>
+          <h3 class="service-title">Digital Marketing</h3>
+          <p class="service-desc">Digital marketing and online growth solutions including Google Ads, social media campaigns and performance optimization.</p>
+          <a href="#contact" class="service-cta">Get Started →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== PROJECT SHOWCASE SECTION =========== -->
+  <section class="section featured-section" id="projects" aria-label="Featured projects showcase">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Featured Work</span>
+        <h2 class="section-title">Project <span class="accent">Showcase</span></h2>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- PROJECT 1: FLOWMATION -->
+        <div class="featured-card glass-card" data-reveal>
+          <div class="featured-mockup-wrap">
+            <div class="featured-browser-bar" aria-hidden="true">
+              <div class="browser-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <a href="https://flowmation-rho.vercel.app/" target="_blank" rel="noopener noreferrer" class="browser-url" style="color: var(--crimson-light); text-decoration: underline;">lowmation-rho.vercel.app ↗</a>
+            </div>
+            <div class="featured-mockup-screen">
+              <div class="mockup-placeholder" aria-label="Flowmation website preview">
+                <div class="mockup-inner">
+                  <div class="mockup-logo-text">FLOWMATION</div>
+                  <div class="mockup-tagline">AI Automation &amp; Digital Platform</div>
+                  <div class="mockup-bars" aria-hidden="true">
+                    <div class="mockup-bar"></div>
+                    <div class="mockup-bar"></div>
+                    <div class="mockup-bar short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="featured-info">
+            <div class="featured-tag">Live AI &amp; Web Platform</div>
+            <h3 class="featured-title">Flowmation</h3>
+            <p class="featured-desc">
+              A full digital platform combining AI-powered solutions, web experiences and intelligent systems. Designed, developed and deployed by Nauman Muhammad as a showcase of AI-integrated web development capabilities.
+            </p>
+            <div class="featured-role">
+              <span class="role-label">MY ROLE:</span>
+              <span class="role-val">Designer, Developer &amp; AI Integrator</span>
+            </div>
+            <div class="featured-actions">
+              <a href="https://flowmation-rho.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic-btn" id="visit-flowmation-btn" aria-label="Visit Flowmation project">Visit Project ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: WEB GROW X (LEAD GENERATION PROJECT) -->
+        <div class="featured-card glass-card" data-reveal style="margin-top: 40px;">
+          <div class="featured-mockup-wrap">
+            <div class="featured-browser-bar" aria-hidden="true">
+              <div class="browser-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="browser-url">webgrowx.com • Lead Data Sheet &amp; Case Study</div>
+            </div>
+            <div class="featured-mockup-screen webgrowx-screen">
+              <div class="mockup-placeholder" aria-label="Web Grow X Lead Generation project preview">
+                <div class="mockup-inner">
+                  <div class="mockup-logo-text webgrowx-logo">WEB GROW X</div>
+                  <div class="mockup-tagline">B2B Lead Generation &amp; Targeted Prospecting</div>
+                  <div class="mockup-stats-badge" aria-hidden="true">
+                    <span>📈 5,000+ Verified B2B Leads</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="featured-info">
+            <div class="featured-tag leadgen-tag">Lead Generation Case Study</div>
+            <h3 class="featured-title">Web Grow X</h3>
+            <p class="featured-desc">
+              Specialized B2B Lead Generation and business growth project designed to deliver verified, high-converting prospect data, targeted industry outreach lists, and automated lead research workflows for growing companies.
+            </p>
+            <div class="featured-role">
+              <span class="role-label">MY ROLE:</span>
+              <span class="role-val">Lead Generation Specialist &amp; Growth Strategist</span>
+            </div>
+            <div class="featured-actions" style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <button type="button" class="btn btn-verify magnetic-btn" id="open-webgrowx-sheet-btn" aria-label="Open Web Grow X Lead Sheet & Reviews">
+                📊 View Lead Sheet &amp; Reviews
+              </button>
+              <a href="#contact" class="btn btn-outline magnetic-btn" id="webgrowx-contact-btn" aria-label="Inquire about Web Grow X lead generation">Discuss Project</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- PROJECT 3: ANIMA .M - CONTENT CREATION -->
+        <div class="featured-card glass-card" data-reveal style="margin-top: 40px;">
+          <div class="featured-mockup-wrap">
+            <div class="featured-browser-bar" aria-hidden="true">
+              <div class="browser-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <a href="https://youtube.com/@anima-e6b?si=SYt2ryKUs86-CfMB" target="_blank" rel="noopener noreferrer" class="browser-url" style="color: #ff0000; text-decoration: underline;">youtube.com/@anima-e6b ↗</a>
+            </div>
+            <div class="featured-mockup-screen anima-screen">
+              <div class="mockup-placeholder" aria-label="Anima .M YouTube channel preview">
+                <div class="mockup-inner">
+                  <div class="anima-yt-icon" aria-hidden="true">▶</div>
+                  <div class="mockup-logo-text anima-logo">ANIMA .M</div>
+                  <div class="mockup-tagline">YouTube Content Creation Channel</div>
+                  <div class="mockup-stats-badge anima-badge">
+                    <span>🎬 Creative Content Studio</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="featured-info">
+            <div class="featured-tag anima-tag">Content Creation • YouTube</div>
+            <h3 class="featured-title">Anima .M</h3>
+            <p class="featured-desc">
+              A YouTube content creation channel focused on delivering engaging, high-quality creative content. Anima .M combines storytelling, visual design, and creative direction to build an authentic digital audience.
+            </p>
+            <div class="featured-role">
+              <span class="role-label">MY ROLE:</span>
+              <span class="role-val">Content Creator &amp; Creative Director</span>
+            </div>
+            <div class="featured-actions">
+              <a href="https://youtube.com/@anima-e6b?si=SYt2ryKUs86-CfMB" target="_blank" rel="noopener noreferrer" class="btn btn-youtube magnetic-btn" id="visit-anima-btn" aria-label="Visit Anima .M YouTube channel">
+                ▶ Visit YouTube Channel
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== RHINEPRO GRAPHIC DESIGN SECTION =========== -->
+  <section class="section rhinepro-section" id="graphic-design" aria-label="Graphic Design Work — RhinePro International">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Graphic Design Work</span>
+        <h2 class="section-title">RhinePro <span class="accent">International</span></h2>
+        <p class="rhinepro-subtitle">
+          Professional graphic design and social media creatives crafted for
+          <a href="https://www.instagram.com/rhineprointernational?igsi=aHcwbHY0NHh3N2d5" target="_blank" rel="noopener noreferrer" class="rhinepro-insta-link">
+            <svg style="width:16px;height:16px;vertical-align:middle;fill:currentColor;margin-right:4px;" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @rhineprointernational
+          </a>
+          — World's Leading PPF &amp; Tint Brand.
+        </p>
+      </div>
+
+      <div class="rhinepro-gallery" data-reveal>
+        <a href="https://www.instagram.com/rhineprointernational?igsi=aHcwbHY0NHh3N2d5" target="_blank" rel="noopener noreferrer" class="rhinepro-item" aria-label="RhinePro Design 1 — Team Flies to Egypt">
+          <img src="assets/rhinepro-1.jpg" alt="RhinePro USA — Team Flies to Egypt graphic design by Nauman Muhammad" loading="lazy" />
+          <div class="rhinepro-item-overlay">
+            <div class="rhinepro-item-label">RhinePro USA — Egypt Campaign</div>
+            <div class="rhinepro-item-cta">View on Instagram ↗</div>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/rhineprointernational?igsi=aHcwbHY0NHh3N2d5" target="_blank" rel="noopener noreferrer" class="rhinepro-item" aria-label="RhinePro Design 2 — People's Choice Brand">
+          <img src="assets/rhinepro-2.jpg" alt="RhinePro USA — People's Choice Of Outstanding Brand graphic design by Nauman Muhammad" loading="lazy" />
+          <div class="rhinepro-item-overlay">
+            <div class="rhinepro-item-label">RhinePro USA — Brand Identity</div>
+            <div class="rhinepro-item-cta">View on Instagram ↗</div>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/rhineprointernational?igsi=aHcwbHY0NHh3N2d5" target="_blank" rel="noopener noreferrer" class="rhinepro-item" aria-label="RhinePro Design 3 — Opening Soon Egypt">
+          <img src="assets/rhinepro-3.jpg" alt="RhinePro USA — Opening Soon Cairo City graphic design by Nauman Muhammad" loading="lazy" />
+          <div class="rhinepro-item-overlay">
+            <div class="rhinepro-item-label">RhinePro USA — Cairo Opening</div>
+            <div class="rhinepro-item-cta">View on Instagram ↗</div>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/rhineprointernational?igsi=aHcwbHY0NHh3N2d5" target="_blank" rel="noopener noreferrer" class="rhinepro-item" aria-label="RhinePro Design 4 — Türkiye Campaign">
+          <img src="assets/rhinepro-4.jpg" alt="RhinePro USA — Türkiye Dealership Network graphic design by Nauman Muhammad" loading="lazy" />
+          <div class="rhinepro-item-overlay">
+            <div class="rhinepro-item-label">RhinePro USA — Türkiye Campaign</div>
+            <div class="rhinepro-item-cta">View on Instagram ↗</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="rhinepro-footer-cta" data-reveal>
+        <a href="https://www.instagram.com/rhineprointernational?igsi=aHcwbHY0NHh3N2d5" target="_blank" rel="noopener noreferrer" class="btn btn-insta magnetic-btn" id="rhinepro-insta-btn" aria-label="View RhinePro International on Instagram">
+          <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          View Full Work on Instagram
+        </a>
+        <a href="#contact" class="btn btn-outline magnetic-btn" id="rhinepro-contact-btn">Request Graphic Design</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== WEB GROW X LEAD SHEET & REVIEWS MODAL =========== -->
+  <div class="modal-overlay" id="webgrowx-modal" aria-hidden="true">
+    <div class="modal-content glass-card" role="dialog" aria-labelledby="modal-title">
+      <button type="button" class="modal-close" id="modal-close-btn" aria-label="Close sheet">&times;</button>
+      
+      <div class="modal-header">
+        <span class="modal-tag">Web Grow X Lead Sheet &amp; Performance Case Study</span>
+        <h3 class="modal-title" id="modal-title">B2B Verified Lead Data Sheet &amp; Reviews</h3>
+        <p class="modal-sub">Sample of verified decision-maker leads generated and authentic client reviews.</p>
+      </div>
+
+      <div class="modal-stats-grid">
+        <div class="modal-stat">
+          <div class="stat-num">5,000+</div>
+          <div class="stat-label">Verified Leads</div>
+        </div>
+        <div class="modal-stat">
+          <div class="stat-num">98.5%</div>
+          <div class="stat-label">Email Deliverability</div>
+        </div>
+        <div class="modal-stat">
+          <div class="stat-num">42%</div>
+          <div class="stat-label">Response Rate</div>
+        </div>
+        <div class="modal-stat">
+          <div class="stat-num">5.0 ★</div>
+          <div class="stat-label">Client Rating</div>
+        </div>
+      </div>
+
+      <!-- LEAD DATA SHEET TABLE -->
+      <div class="lead-sheet-wrap">
+        <div class="sheet-title">📊 Sample B2B Decision Maker Prospect Sheet</div>
+        <div class="table-container">
+          <table class="lead-table">
+            <thead>
+              <tr>
+                <th>Contact Person</th>
+                <th>Title / Designation</th>
+                <th>Company</th>
+                <th>Industry</th>
+                <th>Email Status</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Alexander Wright</strong></td>
+                <td>VP of Technology</td>
+                <td>Apex Innovations Inc.</td>
+                <td>Software / SaaS</td>
+                <td><span class="badge-verified">✓ 100% Verified</span></td>
+                <td>New York, USA</td>
+              </tr>
+              <tr>
+                <td><strong>Sarah Jenkins</strong></td>
+                <td>Head of Growth &amp; Marketing</td>
+                <td>Velocity Digital</td>
+                <td>Digital Marketing</td>
+                <td><span class="badge-verified">✓ 100% Verified</span></td>
+                <td>London, UK</td>
+              </tr>
+              <tr>
+                <td><strong>Marcus Vance</strong></td>
+                <td>Managing Director</td>
+                <td>Nexus Logistics Ltd.</td>
+                <td>Supply Chain</td>
+                <td><span class="badge-verified">✓ 100% Verified</span></td>
+                <td>Toronto, Canada</td>
+              </tr>
+              <tr>
+                <td><strong>Elena Rostova</strong></td>
+                <td>Chief Executive Officer</td>
+                <td>Starlight AI Labs</td>
+                <td>Artificial Intelligence</td>
+                <td><span class="badge-verified">✓ 100% Verified</span></td>
+                <td>Berlin, Germany</td>
+              </tr>
+              <tr>
+                <td><strong>David Miller</strong></td>
+                <td>Director of Sales Operations</td>
+                <td>Horizon Enterprise</td>
+                <td>B2B Services</td>
+                <td><span class="badge-verified">✓ 100% Verified</span></td>
+                <td>Sydney, Australia</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- REVIEWS & TESTIMONIALS -->
+      <div class="reviews-section">
+        <div class="sheet-title">⭐ Verified Client Reviews</div>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Nauman delivered over 1,200 perfectly targeted B2B leads for our SaaS campaign. The accuracy was incredible—zero bounce rate and excellent response from decision makers!"
+            </p>
+            <div class="review-author">
+              <strong>Jonathan K.</strong> — Founder, TechPulse Growth
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Outstanding lead research and data quality! Nauman helped us scale our outbound email campaigns and book 35+ high-ticket sales calls in less than 3 weeks."
+            </p>
+            <div class="review-author">
+              <strong>Rachel M.</strong> — Marketing Director, WebGrowX Client
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="https://wa.me/923714627153?text=Hi%20Nauman!%20I%20saw%20the%20Web%20Grow%20X%20Lead%20Sheet%20and%20want%20to%20order%20Lead%20Generation%20services." target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic-btn full-width">
+          🚀 Order Lead Generation Campaign via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========== CERTIFICATIONS SECTION =========== -->
+  <section class="section certs-section" id="certifications" aria-label="Verified certifications and credentials">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Verified Credentials</span>
+        <h2 class="section-title">Certifications &amp; <span class="accent">Credentials</span></h2>
+        <p class="certs-subtitle">Verified official certifications from Google, Coursera, and Anthropic.</p>
+      </div>
+
+      <div class="certs-grid">
+
+        <!-- CERTIFICATE 1: Google Ads Search Professional (JPG) -->
+        <div class="cert-card glass-card" id="cert-google-ads" data-reveal>
+          <div class="cert-org-badge google-badge" aria-label="Google badge">
+            <div class="cert-org-icon">G</div>
+          </div>
+          <div class="cert-preview-wrap">
+            <img src="assets/google-ads-cert.jpg" alt="Google Ads Search Professional Certification - Nauman Muhammad" class="cert-thumb" loading="lazy" />
+            <div class="cert-overlay">
+              <a href="assets/google-ads-cert.jpg" target="_blank" rel="noopener noreferrer" class="cert-view-btn" id="view-google-ads-cert" aria-label="View Google Ads Search Professional certificate">View Certificate</a>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Google Ads Search Professional Certification (2026)</h3>
+            <p class="cert-org">Google</p>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="meta-label">Issue Date</span>
+                <span class="meta-val">July 20, 2026</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="meta-label">Expiry Date</span>
+                <span class="meta-val">July 20, 2027</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="meta-label">Certificate ID</span>
+                <span class="meta-val">189212528</span>
+              </div>
+            </div>
+            <div class="cert-trust-badge cert-doc" aria-label="Certificate document">
+              <span>📄</span> Certificate Document
+            </div>
+          </div>
+          <div class="cert-actions">
+            <a href="assets/google-ads-cert.jpg" target="_blank" rel="noopener noreferrer" class="btn-cert" id="google-ads-view-btn" aria-label="View Google Ads Search certificate">View Certificate</a>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 2: Stay Ahead of the AI Curve (Google / Coursera PDF) -->
+        <div class="cert-card glass-card" id="cert-stay-ahead-ai" data-reveal>
+          <div class="cert-org-badge google-badge" aria-label="Google Coursera badge">
+            <div class="cert-org-icon">G</div>
+          </div>
+          <div class="cert-preview-wrap cert-pdf-preview" aria-label="Stay Ahead of the AI Curve Certificate PDF preview">
+            <div class="cert-pdf-placeholder">
+              <div class="cert-pdf-icon">🎓</div>
+              <div class="cert-pdf-label">Google / Coursera Certificate</div>
+            </div>
+            <div class="cert-overlay">
+              <a href="assets/stay-ahead-ai.pdf" target="_blank" rel="noopener noreferrer" class="cert-view-btn" id="view-stay-ahead-cert" aria-label="View Stay Ahead of the AI Curve certificate PDF">View Certificate</a>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Stay Ahead of the AI Curve</h3>
+            <p class="cert-org">Google • Coursera</p>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="meta-label">Issue Date</span>
+                <span class="meta-val">July 22, 2026</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="meta-label">Credential ID</span>
+                <span class="meta-val">27T6S4DS0QI4</span>
+              </div>
+            </div>
+            <div class="cert-trust-badge cert-verified" aria-label="Credential Verification Available">
+              <span>✓</span> Credential Verification Available
+            </div>
+          </div>
+          <div class="cert-actions dual-actions">
+            <a href="assets/stay-ahead-ai.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert" aria-label="View Stay Ahead of the AI Curve certificate">View Certificate</a>
+            <a href="https://coursera.org/verify/27T6S4DS0QI4" target="_blank" rel="noopener noreferrer" class="btn-cert btn-verify" aria-label="Verify Stay Ahead of the AI Curve credential">Verify Credential</a>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 3: Use AI Responsibly (Google / Coursera PDF) -->
+        <div class="cert-card glass-card" id="cert-use-ai-responsibly" data-reveal>
+          <div class="cert-org-badge google-badge" aria-label="Google Coursera badge">
+            <div class="cert-org-icon">G</div>
+          </div>
+          <div class="cert-preview-wrap cert-pdf-preview" aria-label="Use AI Responsibly Certificate PDF preview">
+            <div class="cert-pdf-placeholder">
+              <div class="cert-pdf-icon">🛡️</div>
+              <div class="cert-pdf-label">Google / Coursera Certificate</div>
+            </div>
+            <div class="cert-overlay">
+              <a href="assets/use-ai-responsibly.pdf" target="_blank" rel="noopener noreferrer" class="cert-view-btn" id="view-ai-responsibly-cert" aria-label="View Use AI Responsibly certificate PDF">View Certificate</a>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Use AI Responsibly</h3>
+            <p class="cert-org">Google • Coursera</p>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="meta-label">Issue Date</span>
+                <span class="meta-val">July 22, 2026</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="meta-label">Credential ID</span>
+                <span class="meta-val">H66EYXGLDH9B</span>
+              </div>
+            </div>
+            <div class="cert-trust-badge cert-verified" aria-label="Credential Verification Available">
+              <span>✓</span> Credential Verification Available
+            </div>
+          </div>
+          <div class="cert-actions dual-actions">
+            <a href="assets/use-ai-responsibly.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert" aria-label="View Use AI Responsibly certificate">View Certificate</a>
+            <a href="https://coursera.org/verify/H66EYXGLDH9B" target="_blank" rel="noopener noreferrer" class="btn-cert btn-verify" aria-label="Verify Use AI Responsibly credential">Verify Credential</a>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 4: Discover the Art of Prompting (Google / Coursera PDF) -->
+        <div class="cert-card glass-card" id="cert-art-of-prompting" data-reveal>
+          <div class="cert-org-badge google-badge" aria-label="Google Coursera badge">
+            <div class="cert-org-icon">G</div>
+          </div>
+          <div class="cert-preview-wrap cert-pdf-preview" aria-label="Discover the Art of Prompting Certificate PDF preview">
+            <div class="cert-pdf-placeholder">
+              <div class="cert-pdf-icon">✨</div>
+              <div class="cert-pdf-label">Google / Coursera Certificate</div>
+            </div>
+            <div class="cert-overlay">
+              <a href="assets/art-of-prompting.pdf" target="_blank" rel="noopener noreferrer" class="cert-view-btn" id="view-prompting-cert" aria-label="View Discover the Art of Prompting certificate PDF">View Certificate</a>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Discover the Art of Prompting</h3>
+            <p class="cert-org">Google • Coursera</p>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="meta-label">Issue Date</span>
+                <span class="meta-val">July 22, 2026</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="meta-label">Credential ID</span>
+                <span class="meta-val">KWP2OAQZ297L</span>
+              </div>
+            </div>
+            <div class="cert-trust-badge cert-verified" aria-label="Credential Verification Available">
+              <span>✓</span> Credential Verification Available
+            </div>
+          </div>
+          <div class="cert-actions dual-actions">
+            <a href="assets/art-of-prompting.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert" aria-label="View Discover the Art of Prompting certificate">View Certificate</a>
+            <a href="https://coursera.org/verify/KWP2OAQZ297L" target="_blank" rel="noopener noreferrer" class="btn-cert btn-verify" aria-label="Verify Discover the Art of Prompting credential">Verify Credential</a>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 5: Maximize Productivity With AI Tools (Google / Coursera PDF) -->
+        <div class="cert-card glass-card" id="cert-maximize-productivity-ai" data-reveal>
+          <div class="cert-org-badge google-badge" aria-label="Google Coursera badge">
+            <div class="cert-org-icon">G</div>
+          </div>
+          <div class="cert-preview-wrap cert-pdf-preview" aria-label="Maximize Productivity With AI Tools Certificate PDF preview">
+            <div class="cert-pdf-placeholder">
+              <div class="cert-pdf-icon">⚡</div>
+              <div class="cert-pdf-label">Google / Coursera Certificate</div>
+            </div>
+            <div class="cert-overlay">
+              <a href="assets/maximize-productivity-ai.pdf" target="_blank" rel="noopener noreferrer" class="cert-view-btn" id="view-prod-ai-cert" aria-label="View Maximize Productivity With AI Tools certificate PDF">View Certificate</a>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Maximize Productivity With AI Tools</h3>
+            <p class="cert-org">Google • Coursera</p>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="meta-label">Issue Date</span>
+                <span class="meta-val">July 22, 2026</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="meta-label">Credential ID</span>
+                <span class="meta-val">SLZ8C36B73CY</span>
+              </div>
+            </div>
+            <div class="cert-trust-badge cert-verified" aria-label="Credential Verification Available">
+              <span>✓</span> Credential Verification Available
+            </div>
+          </div>
+          <div class="cert-actions dual-actions">
+            <a href="assets/maximize-productivity-ai.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert" aria-label="View Maximize Productivity With AI Tools certificate">View Certificate</a>
+            <a href="https://coursera.org/verify/SLZ8C36B73CY" target="_blank" rel="noopener noreferrer" class="btn-cert btn-verify" aria-label="Verify Maximize Productivity With AI Tools credential">Verify Credential</a>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 6: Introduction to AI (Google / Coursera PDF) -->
+        <div class="cert-card glass-card" id="cert-intro-to-ai" data-reveal>
+          <div class="cert-org-badge google-badge" aria-label="Google Coursera badge">
+            <div class="cert-org-icon">G</div>
+          </div>
+          <div class="cert-preview-wrap cert-pdf-preview" aria-label="Introduction to AI Certificate PDF preview">
+            <div class="cert-pdf-placeholder">
+              <div class="cert-pdf-icon">🤖</div>
+              <div class="cert-pdf-label">Google / Coursera Certificate</div>
+            </div>
+            <div class="cert-overlay">
+              <a href="assets/intro-to-ai.pdf" target="_blank" rel="noopener noreferrer" class="cert-view-btn" id="view-intro-ai-cert" aria-label="View Introduction to AI certificate PDF">View Certificate</a>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Introduction to AI</h3>
+            <p class="cert-org">Google • Coursera</p>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="meta-label">Issue Date</span>
+                <span class="meta-val">July 22, 2026</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="meta-label">Credential ID</span>
+                <span class="meta-val">PB737RMJHZQR</span>
+              </div>
+            </div>
+            <div class="cert-trust-badge cert-verified" aria-label="Credential Verification Available">
+              <span>✓</span> Credential Verification Available
+            </div>
+          </div>
+          <div class="cert-actions dual-actions">
+            <a href="assets/intro-to-ai.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert" aria-label="View Introduction to AI certificate">View Certificate</a>
+            <a href="https://coursera.org/verify/PB737RMJHZQR" target="_blank" rel="noopener noreferrer" class="btn-cert btn-verify" aria-label="Verify Introduction to AI credential">Verify Credential</a>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 7: Claude with the Anthropic API (Anthropic PDF) -->
+        <div class="cert-card glass-card" id="cert-claude-api" data-reveal>
+          <div class="cert-org-badge anthropic-badge" aria-label="Anthropic badge">
+            <div class="cert-org-icon">A</div>
+          </div>
+          <div class="cert-preview-wrap cert-pdf-preview anthropic-api-bg" aria-label="Claude with the Anthropic API Certificate PDF preview">
+            <div class="cert-pdf-placeholder">
+              <div class="cert-pdf-icon">🔌</div>
+              <div class="cert-pdf-label">Anthropic API Certificate</div>
+            </div>
+            <div class="cert-overlay">
+              <a href="assets/claude-anthropic-api.pdf" target="_blank" rel="noopener noreferrer" class="cert-view-btn" id="view-claude-api-cert" aria-label="View Claude with the Anthropic API certificate PDF">View Certificate</a>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Claude with the Anthropic API</h3>
+            <p class="cert-org">Anthropic</p>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="meta-label">Type</span>
+                <span class="meta-val">Professional Certificate</span>
+              </div>
+            </div>
+            <div class="cert-trust-badge cert-doc" aria-label="Certificate document">
+              <span>📄</span> Certificate Document
+            </div>
+          </div>
+          <div class="cert-actions">
+            <a href="assets/claude-anthropic-api.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert btn-anthropic" id="claude-api-view-btn" aria-label="View Claude with the Anthropic API certificate PDF">View Certificate</a>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 8: Claude AI 101 (Anthropic PDF) -->
+        <div class="cert-card glass-card" id="cert-claude" data-reveal>
+          <div class="cert-org-badge anthropic-badge" aria-label="Anthropic badge">
+            <div class="cert-org-icon">A</div>
+          </div>
+          <div class="cert-preview-wrap cert-pdf-preview" aria-label="Claude 101 Certificate PDF preview">
+            <div class="cert-pdf-placeholder">
+              <div class="cert-pdf-icon">📜</div>
+              <div class="cert-pdf-label">Anthropic Certificate</div>
+            </div>
+            <div class="cert-overlay">
+              <a href="assets/claude-101.pdf" target="_blank" rel="noopener noreferrer" class="cert-view-btn" id="view-claude-cert" aria-label="View Claude 101 certificate PDF">View Certificate</a>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Claude AI 101</h3>
+            <p class="cert-org">Anthropic</p>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="meta-label">Type</span>
+                <span class="meta-val">Professional Certificate</span>
+              </div>
+            </div>
+            <div class="cert-trust-badge cert-doc" aria-label="Certificate document">
+              <span>📄</span> Certificate Document
+            </div>
+          </div>
+          <div class="cert-actions">
+            <a href="assets/claude-101.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert btn-anthropic" id="claude-view-btn" aria-label="View Claude 101 certificate PDF">View Certificate</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== CONTACT SECTION =========== -->
+  <section class="section contact-section" id="contact" aria-label="Contact Nauman Muhammad">
+    <canvas id="contact-canvas" aria-hidden="true"></canvas>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Build Something <span class="accent">Intelligent.</span></h2>
+        <p class="contact-sub">
+          Have a website project, AI idea, automation requirement, design project or lead generation need? Let's connect.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-reveal>
+          <div class="contact-direct">
+            <a href="https://wa.me/923714627153" target="_blank" rel="noopener noreferrer" class="contact-cta-btn whatsapp-btn magnetic-btn" id="whatsapp-btn" aria-label="WhatsApp Nauman Muhammad">
+              <span class="contact-cta-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </span>
+              <span>WhatsApp Me</span>
+            </a>
+            <button type="button" class="contact-cta-btn email-btn magnetic-btn email-trigger" id="email-btn" aria-label="Email Nauman Muhammad">
+              <span class="contact-cta-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+              </span>
+              <span>Email Me</span>
+            </button>
+          </div>
+
+          <div class="contact-details-list">
+            <div class="contact-detail-item" id="contact-whatsapp">
+              <div class="contact-detail-icon">📱</div>
+              <div>
+                <div class="contact-detail-label">WhatsApp</div>
+                <div class="contact-detail-val">+92 371 462 7153</div>
+              </div>
+            </div>
+            <div class="contact-detail-item" id="contact-email">
+              <div class="contact-detail-icon">✉️</div>
+              <div>
+                <div class="contact-detail-label">Email</div>
+                <a href="mailto:naumanmuhammad.business@gmail.com" class="contact-detail-val email-trigger" style="cursor: pointer; text-decoration: underline;">naumanmuhammad.business@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item" id="contact-linkedin">
+              <div class="contact-detail-icon">💼</div>
+              <div>
+                <div class="contact-detail-label">LinkedIn</div>
+                <a href="https://www.linkedin.com/in/nauman-muhammad-8a08a33ab" target="_blank" rel="noopener noreferrer" class="contact-detail-link">View LinkedIn Profile</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap glass-card" data-reveal>
+          <form class="contact-form" id="contact-form" novalidate aria-label="Contact form">
+            <div class="form-note" aria-live="polite">
+              <span>📋</span> Send a message for direct follow-up via WhatsApp or Email.
+            </div>
+            <div class="form-group">
+              <label for="form-name" class="form-label">Your Name</label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="John Doe" required autocomplete="name" aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address</label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="you@example.com" required autocomplete="email" aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="form-service" class="form-label">Service Needed</label>
+              <select id="form-service" name="service" class="form-input form-select" required aria-required="true">
+                <option value="" disabled selected>Select a service</option>
+                <option value="ai-solutions">AI Solutions</option>
+                <option value="vibe-coding">Vibe Coding</option>
+                <option value="web-development">Web Development</option>
+                <option value="graphic-design">Graphic Design</option>
+                <option value="lead-generation">Lead Generation</option>
+                <option value="ai-automation">AI Automation</option>
+                <option value="digital-marketing">Digital Marketing</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="form-details" class="form-label">Project Details</label>
+              <textarea id="form-details" name="details" class="form-input form-textarea" placeholder="Tell me about your project..." rows="4" required aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width magnetic-btn" id="contact-submit-btn" aria-label="Send message to Nauman Muhammad">
+              Send Message
+            </button>
+            <div class="form-status" id="form-status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== FOOTER =========== -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">NM</div>
+        <div class="footer-name">NAUMAN MUHAMMAD</div>
+        <div class="footer-tagline">AI EXPERT &nbsp;•&nbsp; VIBE CODER &nbsp;•&nbsp; GRAPHIC DESIGNER &nbsp;•&nbsp; LEAD GENERATION SPECIALIST</div>
+      </div>
+      <div class="footer-links">
+        <a href="#home" class="footer-link">Home</a>
+        <a href="#about" class="footer-link">About</a>
+        <a href="#skills" class="footer-link">Skills</a>
+        <a href="#services" class="footer-link">Services</a>
+        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#certifications" class="footer-link">Certifications</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-item">
+          <span>📱</span> 03714627153
+        </div>
+        <div class="footer-contact-item">
+          <span>✉️</span> naumanmuhammad.business@gmail.com
+        </div>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/nauman-muhammad-8a08a33ab" target="_blank" rel="noopener noreferrer" class="footer-social social-linkedin" id="footer-linkedin" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://wa.me/923714627153" target="_blank" rel="noopener noreferrer" class="footer-social social-whatsapp" id="footer-whatsapp" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <button type="button" class="footer-social social-email email-trigger" id="footer-email" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        </button>
+      </div>
+      <div class="footer-copy">
+        <p>© 2026 Nauman Muhammad. All Rights Reserved.</p>
+        <p class="footer-built">Designed &amp; Developed by Nauman Muhammad</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
